@@ -1,0 +1,37 @@
+Problema: Simular el filtrado de señales utilizando la función de densidad de probabilidad (fdp) de la campana de Gauss (distribución normal)
+
+La funcion de densidad de probabilidad (fdp) esta dada por f(x) = (e^((-1/2)*((i-1000)/300)^2)) / (300*((2*PI)^(1/2))
+La funcion de densidad de probabilidad acumulada (fdp_acumulada) esta dada por la Σ f(x)
+
+Entrada(s): 
+- Frecuencia de la señal (f).
+
+Salida(s):
+- Mensaje indicando si la señal pasa o es bloqueada por el filtro.
+
+Otras variables:
+- El iterador utilizado en el ciclo (i).
+- La frencuencia de densidad de probabilidad (fdp).
+- La frecuencia de densidad de probabilidad acumulada (fdp_acumulada).
+- La constante PI.
+- La constante del número de Euler (e).
+
+Proceso(s):
+- Se debe solicitar la frecuencia de la señal (colocar un input).
+- Inicializar una variable donde se guardará el resultado (f).
+- Inicializar un condicional para determinar la operacion con valores de f positivos, o en su defecto con valores de f negativos
+
+Para valores de f positivos: 
+	- Inicializar un contador para incrementar el producto de la fdp_acumulada en cada iteración.
+	- Determinar la f(x) de la fdp.
+	- Iterar desde un valor inicial 0 hasta llegar a el valor de la frecuencia dada por el usuario. En este caso, se conoce el número 	de repeticiones definidas (i = 0 hasta f), por lo que se utilizara un ciclo For.
+	- En cada iteración sumar el valor de la fdp con la fdp_acumulada y guardar el resultado.
+
+Para valores de f negativos: 
+	- Inicializar una ventana que contenga "***Error***  Ingreso una frecuencia negativa".
+
+- Finalmente, inicializar un condicional para fdp_acumulada > 0.3, mostrar: "La señal paso el filtro"; Si no, mostrar: "La señal fue bloqueada por el filtro".
+
+Restricciones: 
+- Aplica para números enteros no negativos -> Se debe validar el signo
+- La validación se puede hacer con un condicional que verifique que el valor ingresado es un número entero positivo o igual a 0 . De lo contrario, indicarle al usuario para que intente nuevamente o finalizar el programa. Como esto no se indica, se procederá a indicar el error y finalizar. 
