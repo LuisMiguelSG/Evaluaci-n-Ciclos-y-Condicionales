@@ -1,0 +1,70 @@
+Prueba 1:
+
+Iniciar simulador_del_filtrado_de_señales
+f, i, fdp, fdp_acumulada, PI, e
+Si el usuario ingresa 0:
+f = 0
+0 >= 0 , como NO es menor que 0:
+fdp_acumulada = 0
+Se ejecuta el ciclo:
+Iteración #1 
+i = 0 
+fdp = (e^((-1/2)*((0-1000)/300)^2)) / (300*((2*PI)^(1/2)) = 5.140929987637019e-06
+fdp_acumulada = 0 + 5.140929987637019e-06 = 5.140929987637019e-06
+i paso a ser 1, entonces 1>0, SI:
+Se termina el ciclo
+
+5.140929987637019e-06 > 0,3? , NO:
+
+La señal fue bloqueada por el filtro
+
+
+
+
+Prueba 2:
+
+Iniciar simulador_del_filtrado_de_señales
+f, i, fdp, fdp_acumulada, PI, e
+Si el usuario ingresa 1:
+f = 1
+1 >= 0 , como NO es menor que 0:
+fdp_acumulada = 0
+Se ejecuta el ciclo:
+Iteración #1 
+i = 0 
+fdp = (e^((-1/2)*((0-1000)/300)^2)) / (300*((2*PI)^(1/2)) = 5.140929987637019e-06
+fdp_acumulada = 0 + 5.140929987637019e-06 = 5.140929987637019e-06
+i paso a ser 1, entonces 1>1?: NO
+
+Iteración #2
+i = 1
+fdp = (e^((-1/2)*((1-1000)/300)^2)) / (300*((2*PI)^(1/2)) = 5.198341072158974e-06
+fdp_acumulada = 5.140929987637019e-06 + 5.198341072158974e-06 = 1.0339271059795995e-05
+i paso a ser 2, entonces 2 > 1, SI:
+Se termina el ciclo
+
+1.0339271059795995e-05 > 0,3? , NO:
+
+La señal fue bloqueada por el filtro
+
+
+
+
+Prueba 3:
+
+Iniciar simulador_del_filtrado_de_señales
+f, i, fdp, fdp_acumulada, PI, e
+Si el usuario ingresa -1:
+f = -1
+-1 >= 0 , como SI es menor que 0:
+No se ejecuta el ciclo
+
+***Error***  Ingreso una frecuencia negativa
+
+
+
+
+Pregunta:
+
+"¿para qué valor de frecuencia la señal deja de ser bloqueada?"
+Respuesta: 843 
